@@ -2,7 +2,7 @@ let amigos = [];
 
 function agregarAmigo() {
     const input = document.getElementById('amigo');
-    const nombre = input.value.trim();
+    const nombre = input.value.trim().toLowerCase(); //Se agregó toLowerCase para poner el nombre en minúsculas y así evitar que se puedan repetir
 
     //Evitar ingresas input vacio
     if (nombre === "") {
@@ -28,7 +28,7 @@ function actualizarLista(){
 
     for(let i = 0; i <amigos.length; i++) { 
         const li = document.createElement('li'); 
-        li.textContent = amigos[i]
+        li.textContent = primeraMayuscula(amigos[i]);
         listaAmigos.appendChild(li);
     }
 }
@@ -45,7 +45,12 @@ function sortearAmigo(){
     const indiceAleatorio = Math.floor(Math.random() * amigos.length);
     const amigoSorteado = amigos[indiceAleatorio];
     const resultado = document.getElementById('resultado');
-    resultado.innerHTML = `El amigo secreto es ${amigoSorteado}`;
+    resultado.innerHTML = `El amigo secreto es ${primeraMayuscula(amigoSorteado)}`;
+}
+
+//Función para que el resultado sea escrito con la primera letra mayúscula
+function primeraMayuscula(nombre) {
+    return nombre.charAt(0).toUpperCase() + nombre.slice(1);
 }
 
 

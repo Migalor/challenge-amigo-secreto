@@ -36,13 +36,13 @@ function actualizarLista(){
 function sortearAmigo(){
 
     //Mensaje de Error si no hay lista de amigos
-    if (amigos.length = 0){
+    if (amigos.length === 0){
         alert("Ingrese nombres para poder realizar el sorteo");
         return;
     }
 
     //Sorteo
-    const indiceAleatorio = Math.floor(Math.random() * amigos.lenght);
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
     const amigoSorteado = amigos[indiceAleatorio];
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = `El amigo secreto es ${amigoSorteado}`;

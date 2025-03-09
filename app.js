@@ -53,4 +53,12 @@ function primeraMayuscula(nombre) {
     return nombre.charAt(0).toUpperCase() + nombre.slice(1);
 }
 
+//Utilizar tecla Enter para añadir nombres a la lista
+const input = document.getElementById('amigo');
+input.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        agregarAmigo();
+    }
+});
+
 

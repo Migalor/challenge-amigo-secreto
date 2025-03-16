@@ -1,5 +1,7 @@
 Con este challenge se busca desarrollar una aplicación en la que el usuario ingrese nombres y pueda realizar un sorteo para seleccionar un amigo secreto al azar.
 
+![Image](https://github.com/user-attachments/assets/2c9a9a81-cfef-4f6a-87f8-b2ef52dadb35)
+
 Funcionalidad:
 1) El usuario ingresa un nombre y le da a la tecla 'Enter' o hace click en el botón añadir.
 
